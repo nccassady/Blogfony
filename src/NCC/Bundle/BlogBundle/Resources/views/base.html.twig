@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block footer %}
+            <hr>
+            {% if app.user is not null and app.user.roles|length > 0 %}
+                 <a href="{{ path('logout') }} ">Sign Out</a>
+            {% else %}
+                <a href="{{ path('login') }} ">Sign in</a>
+            {% endif %}
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

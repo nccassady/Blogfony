@@ -1,0 +1,15 @@
+{% extends 'NCCBlogBundle::singlePostLayout.html.twig' %}
+
+{% block content -%}
+    <h1>{{ entity.title }}</h1>
+    <div class="byline">Written by {{ entity.author }} on {{ entity.date|date('Y-m-d H:i:s') }}</div>
+    <div class="body"><p>{{ entity.body }}</p></div>
+         <a href="{{ path('post_edit', { 'id': entity.id }) }}">
+                    Edit 
+     {{ form(delete_form) }} 
+{% endblock %}
+
+{% block footer %}
+{{ parent() }}
+<a href="{{ path('home') }} ">Home</a>
+{% endblock %}

@@ -1,0 +1,38 @@
+home:
+    pattern:  /
+    defaults: { _controller: NCCBlogBundle:Default:index }
+
+post_show:
+    pattern:  /{title}
+    defaults: { _controller: "NCCBlogBundle:Post:show" }
+
+post_list:
+    pattern:  /list
+    defaults: { _controller: "NCCBlogBundle:Post:index" }
+
+post_new:
+    pattern:  /new
+    defaults: { _controller: "NCCBlogBundle:Post:new" }
+
+post_create:
+    pattern:  /create
+    defaults: { _controller: "NCCBlogBundle:Post:create" }
+    requirements: { _method: post }
+
+post_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "NCCBlogBundle:Post:edit" }
+
+post_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "NCCBlogBundle:Post:update" }
+    requirements: { _method: post|put }
+
+post_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "NCCBlogBundle:Post:delete" }
+    requirements: { _method: post|delete }
+
+NCCBlogBundle_user:
+    resource: "@NCCBlogBundle/Resources/config/routing/user.yml"
+    prefix:   /user

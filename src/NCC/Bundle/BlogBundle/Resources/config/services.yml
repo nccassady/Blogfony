@@ -1,0 +1,7 @@
+parameters:
+#    ncc_blog.example.class: NCC\Bundle\BlogBundle\Example
+
+services:
+#    ncc_blog.example:
+#        class: %ncc_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

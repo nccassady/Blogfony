@@ -1,0 +1,9 @@
+{% extends 'NCCBlogBundle::homeLayout.html.twig' %}
+
+{% block content %}
+	{% for post in posts %}
+		<h2> <a href="{{ path('post_show', { 'title': post.Title }) }}">{{ post.Title }}</a></h2>
+		<div class="byline">By <a href="{{ path('user_show', {'name':post.Author}) }} ">{{ post.Author }}</a> on {{ post.date | date('F j, Y', 'US/Arizona') }} </div>
+		<p>{{ post.Body | slice(0, 100) }}...</p>
+	{% endfor %}
+{% endblock %}

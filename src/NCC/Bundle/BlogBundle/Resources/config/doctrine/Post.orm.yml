@@ -1,0 +1,25 @@
+NCC\Bundle\BlogBundle\Entity\Post:
+    type: entity
+    table: null
+    repositoryClass: NCC\Bundle\BlogBundle\Entity\PostRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        title:
+            type: string
+            length: '50'
+            column: Title
+        body:
+            type: text
+            column: Body
+        date:
+            type: datetime
+            column: Date
+        author:
+            type: string
+            length: '50'
+            column: Author
+    lifecycleCallbacks: {  }

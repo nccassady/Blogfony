@@ -1,0 +1,30 @@
+user:
+    pattern:  /
+    defaults: { _controller: "NCCBlogBundle:User:index" }
+
+user_show:
+    pattern:  /{name}/show
+    defaults: { _controller: "NCCBlogBundle:User:show" }
+
+user_new:
+    pattern:  /new
+    defaults: { _controller: "NCCBlogBundle:User:new" }
+
+user_create:
+    pattern:  /create
+    defaults: { _controller: "NCCBlogBundle:User:create" }
+
+    requirements: { _method: post }
+user_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "NCCBlogBundle:User:edit" }
+
+user_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "NCCBlogBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "NCCBlogBundle:User:delete" }
+    requirements: { _method: post|delete }

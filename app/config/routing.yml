@@ -1,0 +1,14 @@
+ncc_blog:
+    resource: "@NCCBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+login:
+    pattern: /login
+    defaults: { _controller: NCCBlogBundle:Security:login }
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+    defaults: { _controller: NCCBlogBundle:Default:index }

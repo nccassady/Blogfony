@@ -1,0 +1,35 @@
+NCC\Bundle\BlogBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: NCC\Bundle\BlogBundle\Entity\UserRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            length: '20'
+        password:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: '50'
+            nullable: true
+        realName:
+            type: string
+            length: '50'
+            column: real_name
+            nullable: true
+        groupName:
+            type: string
+            length: '20'
+            column: group_name
+            nullable: true
+        about:
+            type: text
+            column: about
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,1 @@
+This is my first Symfony2 project. As you can tell from the title, this is a very basic blog backend. Feedback would be greatly appreciated.
